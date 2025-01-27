@@ -1,0 +1,172 @@
+.sidebar {
+    min-height: 100vh;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: #f0f4f9;
+    padding: 25px 15px;
+}
+.sidebar img{
+  width: 20px;
+}
+.sidebar .menu{
+  cursor: pointer;
+  display: block;
+  margin-left: 10px;
+  width: 25px;
+  height: 25px;
+  position: relative;
+  transition: background-color 0.3s ease; /* Smooth transition */
+}
+
+/* Change background color on hover */
+.sidebar .menu:hover {
+  border-radius: 50%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+  padding-left: 10px;
+  width: 40px;
+  height: 40px;
+  background-color:  #d1d5db; /* Replace with the desired hover background color */
+}
+
+
+/* Tooltip styling for the menu icon */
+.menu-container {
+    position: relative;
+}
+
+.menu-container .tooltip {
+    display: none;
+    position: absolute;
+    margin-top: 10px;
+    /* left: 1px; Adjust based on your layout */
+    background-color: black;
+    color: white;
+    padding-top: 5px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+}
+
+/* Show tooltip when hovering over the menu icon */
+.menu-container:hover .tooltip {
+    display: block;
+}
+
+
+.sidebar .new-chat {
+  margin-top: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 15px;
+  background-color: #e6eaf1 ;
+  font-size: 14px;
+  color: gray;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative; //chat
+}
+
+.new-chat .new-chat-text{
+  position: absolute;
+  left: 35px;
+  background-color: black;
+  color: white;
+  margin-top: 90px;
+  padding: 10px;
+  padding: 5px 15px;
+  border-radius: 5px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 1;
+  display: none;
+}
+/* Show text on hover when sidebar is collapsed */
+.new-chat:hover .new-chat-text {
+  display: block;
+}
+.sidebar .recent {
+  display: flex;
+  margin-top: 40px;
+  flex-direction: column;
+}
+.sidebar .recent-tilte{
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.sidebar .recent-entry{
+  display: flex;
+  align-items: start;
+  gap: 10px;
+  padding: 15px;
+  margin-top: 10px;
+  border-radius: 50px;
+  padding-right: 40px
+  color: #282828;
+  cursor: pointer;
+}
+.sidebar .recent-entry.recent-entry:hover{
+  background-color: #e2e6eb;
+
+}
+.sidebar .bottom {
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .bottom-item{
+  padding: 10px;
+  align-items: center;
+  gap: 10px;
+  display: flex;
+  cursor: pointer;
+  position: relative;
+}
+
+.sidebar .bottom-item p {
+    margin: 0; 
+}
+
+.sidebar .bottom-item:hover p {
+    height: 30px;
+    width: 80px;
+    border-radius: 5px;
+    text-align: center;
+    gap: 10px;
+    padding-top: 5px;
+    padding-right: 2px;
+    background-color: rgba(0, 0, 0, 0.1); 
+    border-radius: 5px;
+}
+
+
+/* Tooltip styling */
+.sidebar .bottom-item {
+    position: relative;
+}
+
+.sidebar .bottom-item .tooltip {
+    display: none;
+    position: absolute;
+    left: 65px;
+    background-color: black;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    white-space: nowrap;
+    z-index: 1;
+
+    /* Adding width for more control */
+    width: max-content; 
+    Adjusts to fit content, 
+}
+
+/* Display tooltip on hover only if sidebar is collapsed */
+.sidebar.collapsed .bottom-item:hover .tooltip {
+    display: block;
+}
