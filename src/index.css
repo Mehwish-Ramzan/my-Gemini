@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Outfit;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+}
+
+
+.scrollbar-hidden::-webkit-scrollbar{
+  display: none;
+}
+/*Hide scrollbar for internet exploere */
+.scrollbar-hidden{
+  -ms-overflow-style: none;
+}
+/* hidescrollbar for Firefox */ 
+.scrollbar-hidden {
+  scrollbar-width: none;
+}
+.scrollbar-hidden{
+  overflow: auto;
+}
